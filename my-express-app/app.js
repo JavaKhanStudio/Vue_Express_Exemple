@@ -7,6 +7,16 @@ app.use(cors({
     credentials: true
 }));
 
+app.get("/sync", (req, res) => {
+    setTimeout(() => {
+        res.json({ message: "Données synchrones chargées avec un délai de 3 secondes !" });
+    }, 3000);
+});
+
+app.get("/async", (req, res) => {
+    res.json({ message: "Données asynchrones chargées après le clic !" });
+});
+
 app.get('/', (req, res) => {
     res.send('Hello World!');
 });

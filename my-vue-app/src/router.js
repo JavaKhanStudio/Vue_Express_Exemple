@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import Home from './components/Home.vue';
 import More from './components/AppEvenMore.vue';
 import Condition from './components/vIfExemple/VIfExemple.vue';
+import SynVsAsyn from './components/dataPullingExemple/SynVsAsynExemple.vue';
 
 const router = createRouter({
     history: createWebHistory(),
@@ -37,6 +38,11 @@ const router = createRouter({
                     component: () => import('./components/subFolder/Sub2.vue'),
                 }
             ]
+        },
+        {
+            path: '/synVsAsyn',
+            name: 'SynVsAsyn',
+            component: SynVsAsyn
         },
         {
             path: '/elementInternalAndEmit',
