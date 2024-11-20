@@ -1,11 +1,21 @@
 const express = require('express');
 const cors = require('cors');
+const cookieParser = require("cookie-parser");
 const app = express();
 
 app.use(cors({
     origin: 'http://localhost:8080', // Permet l’accès uniquement de mon localhost
     credentials: true
 }));
+app.use(cookieParser());
+
+app.get('/', (req, res) => {
+    res.send('Hello World!');
+});
+
+app.get("/status", (req, res) => {
+    res.json({ message: "Tout fonctionne parfaitement !" });
+});
 
 app.get("/sync", (req, res) => {
     setTimeout(() => {
@@ -17,13 +27,14 @@ app.get("/async", (req, res) => {
     res.json({ message: "Données asynchrones chargées après le clic !" });
 });
 
-app.get('/', (req, res) => {
-    res.send('Hello World!');
+app.get("/verify-cookie", (req, res) => {
+    const greetingCookie = req.cookies.greeting;
+    if (!greetingCookie) {
+        return res.status(401).json({ message: "Cookie is missing or expired." });
+    }
+    res.json({ message: `Cookie is valid: ${greetingCookie}` });
 });
 
-app.get("/status", (req, res) => {
-    res.json({ message: "Tout fonctionne parfaitement !" });
-});
 
 app.get('/recherche', (req, res) => {
     // Récupérer les paramètres de la requête

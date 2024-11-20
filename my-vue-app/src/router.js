@@ -45,6 +45,11 @@ const router = createRouter({
             component: SynVsAsyn
         },
         {
+            path: '/cookieAndStorage',
+            name: 'CookieAndStorage',
+            component: () => import('./components/cookiesAndStorage/CookieAndStorageExemple.vue'),
+        },
+        {
             path: '/elementInternalAndEmit',
             name: 'ElementInternalAndEmit',
             component: () => import('./components/emitExemple/ElementInternalAndEmit.vue'),

@@ -7,12 +7,14 @@
         <li><router-link to="/condition">Condition</router-link></li>
         <li><router-link to="/multi">Multi</router-link></li>
         <li><router-link to="/synVsAsyn">Data Loading</router-link></li>
+        <li><router-link to="/cookieAndStorage">Cookie and Storage</router-link></li>
         <li><router-link to="/elementInternalAndEmit">Internal And emit</router-link></li>
         <li><router-link to="/vExempleContainer">V List</router-link></li>
       </ul>
     </nav>
     Je suis dans toute les pages
     <router-view />
+
   </div>
 </template>
 
