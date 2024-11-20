@@ -4,6 +4,7 @@
       <ul>
         <li><router-link to="/">Home</router-link></li>
         <li><router-link to="/more">More</router-link></li>
+        <li><router-link to="/condition">Condition</router-link></li>
         <li><router-link to="/multi">Multi</router-link></li>
         <li><router-link to="/elementInternalAndEmit">Internal And emit</router-link></li>
         <li><router-link to="/vExempleContainer">V List</router-link></li>

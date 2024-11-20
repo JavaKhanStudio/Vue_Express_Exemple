@@ -1,8 +1,18 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
+
+app.use(cors({
+    origin: 'http://localhost:8080', // Permet l’accès uniquement de mon localhost
+    credentials: true
+}));
 
 app.get('/', (req, res) => {
     res.send('Hello World!');
+});
+
+app.get("/status", (req, res) => {
+    res.json({ message: "Tout fonctionne parfaitement !" });
 });
 
 app.get('/recherche', (req, res) => {

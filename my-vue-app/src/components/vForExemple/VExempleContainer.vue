@@ -1,7 +1,10 @@
 <template>
     <div class="container">
       <h1 class="my-comp">Ma V List</h1>
-      <VForExemple v-for="(myValue, index) in list" :key="myValue" :requiredVariable="index" :initialParams="myValue.params" :possible-variable="myValue.params.color" />
+      <VForExemple v-for="(myValue, index) in list"
+                   :key="myValue.id"
+                   :requiredVariable="index"
+                   :possible-variable="myValue.params.color" />
     </div>
 </template>
   
@@ -16,10 +19,10 @@
       data() {
         return {
           list: [
-            { params: { color: "Le jaune c'est tres bien" }},
-            { params: { color: '' } },
-            { params: { color: "Le rouge c'est encore mieux" } },
-            { params: { color: ''} }
+            { id: 1 , params: { color: "Le jaune c'est tres bien" }},
+            { id: 22 , params: { color: '' } },
+            { id: 56 , params: { color: "Le rouge c'est encore mieux" } },
+            { id: 43 , params: { color: ''} }
           ]
         }
       },

@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from './components/Home.vue';
 import More from './components/AppEvenMore.vue';
+import Condition from './components/vIfExemple/VIfExemple.vue';
 
 const router = createRouter({
     history: createWebHistory(),
@@ -14,6 +15,11 @@ const router = createRouter({
             path: '/more',
             name: 'More',
             component: More
+        },
+        {
+            path: '/condition',
+            name: 'Condition',
+            component: Condition
         },
         {
             path: '/multi',
