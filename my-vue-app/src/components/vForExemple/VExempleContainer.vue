@@ -1,9 +1,9 @@
 <template>
     <div class="container">
-      <h1 class="my-comp">List</h1>
-      <VForExemple v-for="(myValue, index) in list" :key="myValue" :requiredVariable="index" :initialParams="myValue.params" />
+      <h1 class="my-comp">Ma V List</h1>
+      <VForExemple v-for="(myValue, index) in list" :key="myValue" :requiredVariable="index" :initialParams="myValue.params" :possible-variable="myValue.params.color" />
     </div>
-  </template>
+</template>
   
   <script>
     import VForExemple from './VForExemple.vue';
@@ -16,10 +16,10 @@
       data() {
         return {
           list: [
-            { params: { color: 'yellow', fontSize: '38px' }},
-            { params: { color: 'purple', fontSize: '48px' } },
-            { params: { color: 'crimson', fontSize: '30px' } },
-            { params: { color: 'aqua', fontSize: '30px' } }
+            { params: { color: "Le jaune c'est tres bien" }},
+            { params: { color: '' } },
+            { params: { color: "Le rouge c'est encore mieux" } },
+            { params: { color: ''} }
           ]
         }
       },
@@ -38,7 +38,7 @@
     .my-comp {
       font-size: 30px; 
       font-family: Arial, sans-serif;
-      color: aqua;
+      color: tomato;
     }
   </style>
   

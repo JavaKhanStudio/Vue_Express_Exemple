@@ -9,6 +9,7 @@
         <li><router-link to="/vExempleContainer">V List</router-link></li>
       </ul>
     </nav>
+    Je suis dans toute les pages
     <router-view />
   </div>
 </template>
@@ -35,4 +36,5 @@ li{
   padding-left: 10px;
   padding-right: 10px;
 }
+
 </style>

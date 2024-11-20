@@ -15,7 +15,7 @@
     },
     possibleVariable: {
       type: String,
-      required: true
+      required: false
     },
   }
 
@@ -32,7 +32,7 @@
   .my-comp {
     font-size: 30px; 
     font-family: Arial, sans-serif;
-    color: aqua;
+    color: darkcyan;
   }
   </style>
   

@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-      <h1 class="my-comp">App More</h1>
+      <h1 class="my-comp">Ma Home</h1>
     </div>
   </template>
   

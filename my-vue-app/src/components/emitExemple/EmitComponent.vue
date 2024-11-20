@@ -26,7 +26,7 @@
   .my-comp {
     font-size: 30px; 
     font-family: Arial, sans-serif;
-    color: aqua;
+    color: tomato;
   }
   </style>
   
