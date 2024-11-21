@@ -1,11 +1,13 @@
 <template>
   <div id="app">
+
     <nav>
       <ul>
         <li><router-link to="/">Home</router-link></li>
         <li><router-link to="/more">More</router-link></li>
         <li><router-link to="/condition">Condition</router-link></li>
         <li><router-link to="/multi">Multi</router-link></li>
+        <li><router-link to="/pathVariableAndParams">Path and Params</router-link></li>
         <li><router-link to="/synVsAsyn">Data Loading</router-link></li>
         <li><router-link to="/cookieAndStorage">Cookie and Storage</router-link></li>
         <li><router-link to="/elementInternalAndEmit">Internal And emit</router-link></li>

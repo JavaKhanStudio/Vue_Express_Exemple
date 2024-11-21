@@ -4,6 +4,8 @@ import More from './components/AppEvenMore.vue';
 import Condition from './components/vIfExemple/VIfExemple.vue';
 import SynVsAsyn from './components/dataPullingExemple/SynVsAsynExemple.vue';
 
+
+
 const router = createRouter({
     history: createWebHistory(),
     routes: [
@@ -17,11 +19,7 @@ const router = createRouter({
             name: 'More',
             component: More
         },
-        {
-            path: '/condition',
-            name: 'Condition',
-            component: Condition
-        },
+
         {
             path: '/multi',
             name: 'Multi',
@@ -38,6 +36,21 @@ const router = createRouter({
                     component: () => import('./components/subFolder/Sub2.vue'),
                 }
             ]
+        },
+        {
+            path: '/pathVariableAndParams',
+            name: 'PathVariableAndParams',
+            component: () => import('./components/pathVariableAndParams/HomePage.vue'),
+        },
+        {
+            path: '/detail/:id',
+            name: 'Detail',
+            component: () => import('./components/pathVariableAndParams/DetailsPage.vue'),
+        },
+        {
+            path: '/condition',
+            name: 'Condition',
+            component: Condition
         },
         {
             path: '/synVsAsyn',
