@@ -47,6 +47,10 @@ const router = createRouter({
             name: 'Detail',
             component: () => import('./components/pathVariableAndParams/DetailsPage.vue'),
         },
+        {   path: "/detail/:id/:subId",
+            name: "SubDetail",
+            component: () => import('./components/pathVariableAndParams/SubDetailPage.vue'),
+        },
         {
             path: '/condition',
             name: 'Condition',

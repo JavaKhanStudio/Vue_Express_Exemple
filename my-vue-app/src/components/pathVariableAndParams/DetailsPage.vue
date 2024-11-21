@@ -4,21 +4,31 @@
     <p>Path Variable utilisé : {{ id }}</p>
     <p v-if="param1">Query Param 1 : {{ param1 }}</p>
     <p v-if="param2">Query Param 2 : {{ param2 }}</p>
-    <router-link to="/pathVariableAndParams">Retour à la page d'accueil</router-link>
+
+    <div class="button-container">
+      <router-link to="/pathVariableAndParams">Retour à la page d'accueil</router-link>
+      <router-link :to="buildSubPath(101)">Naviguer vers SubPath 101</router-link>
+      <router-link :to="buildSubPath(202)">Naviguer vers SubPath 202</router-link>
+    </div>
   </div>
 </template>
 
 <script>
-import { useRoute } from 'vue-router';
+import {useRoute} from "vue-router";
 
 export default {
   setup() {
     const route = useRoute();
+
     const id = route.params.id;
     const param1 = route.query.param1 || null;
     const param2 = route.query.param2 || null;
 
-    return { id, param1, param2 };
+    const buildSubPath = (subId) => {
+      return {name: "SubDetail", params: {id, subId}};
+    };
+
+    return {id, param1, param2, buildSubPath};
   },
 };
 </script>
@@ -50,9 +60,16 @@ export default {
   text-align: center;
 }
 
-.details-container a {
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+  align-items: center;
+}
+
+.button-container a {
   display: inline-block;
-  margin-top: 1rem;
   padding: 0.5rem 1rem;
   font-size: 1rem;
   text-decoration: none;
@@ -63,11 +80,11 @@ export default {
   text-align: center;
 }
 
-.details-container a:hover {
+.button-container a:hover {
   background-color: #3e8e41;
 }
 
-.details-container a:focus {
+.button-container a:focus {
   outline: 3px solid #3e8e41;
 }
 </style>

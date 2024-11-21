@@ -31,7 +31,7 @@ export default {
     return {
       param1: '',
       param2: '',
-      buttons: [1, 2, 3], // Array to define the buttons dynamically
+      buttons: [1, 2, 3, "ninja", "popcorn"],
     };
   },
   methods: {
@@ -39,6 +39,7 @@ export default {
       const query = {};
       if (this.param1) query.param1 = this.param1;
       if (this.param2) query.param2 = this.param2;
+
       return { name: 'Detail', params: { id }, query };
     },
   },
