@@ -1,15 +1,21 @@
 <template>
     <div class="container">
-      <button @click="emitButton()">Emit</button>
+      <button @click="emitButton()">Emit : {{ paramToEmit }}</button>
     </div>
   </template>
   
   <script>
   export default {
     name: 'EmitComponent',
+    props: {
+      paramToEmit: {
+        type: String,
+        required: true
+      },
+    },
     methods: {
       emitButton() {
-        this.$emit('emit-method', "Variables");
+        this.$emit('emit-method', `L'appel de la méthode viens de EmitComponent.vue, pas du parent !  ${ this.paramToEmit }`);
       },
     },
   };
@@ -20,7 +26,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
   }
   
   .my-comp {

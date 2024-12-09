@@ -50,7 +50,6 @@ export default {
 .container {
   display: flex;
   flex-direction: column;
-  max-width: 600px;
   margin: 2rem auto;
   padding: 1.5rem;
   background-color: #ffffff;

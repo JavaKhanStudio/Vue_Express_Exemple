@@ -3,7 +3,7 @@ import App from './App.vue';
 import router from './router.js';
 
 import VueCookies from "vue-cookies";
-
+import '@/assets/globalStyle.css';
 
 const app = createApp(App);
 app.use(router);

@@ -1,0 +1,17 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #007BFF;
+    --third-color: #FFC107;
+    --error-color: #FF5252;
+    --text-color: #333;
+    --background-color: #e5faff;
+    --sub-background-color: #f9f9f9;
+    --header-size:15vh;
+    --main-size:70vh;
+    --foooter-size:15vh;
+}

@@ -1,8 +1,8 @@
 <template>
     <div class="container">
         <button @click="internalButton()">Internal</button>
-        <EmitComponent @emit-method="emitMethod"/>
-        
+        <EmitComponent @emit-method="emitMethod" param-to-emit="Le Param 1"/>
+        <EmitComponent @emit-method="emitMethod" param-to-emit="Le deuxième param 1"/>
     </div>
   </template>
   
@@ -14,7 +14,7 @@ import EmitComponent from './EmitComponent.vue';
     name: 'ElementInternalAndEmit',
     methods: {
         internalButton() {
-            alert("my Button ! ");
+            alert("Mon code est dans ElementInternalAndEmit.vue !");
         },
         emitMethod(variable) {
           alert(variable) ;
@@ -30,7 +30,6 @@ import EmitComponent from './EmitComponent.vue';
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
   }
   
   .my-comp {

@@ -9,15 +9,15 @@
   export default {
     name: 'VForExemple',
     props: {
-    requiredVariable: {
-      type: Number,
-      required: true
-    },
-    possibleVariable: {
-      type: String,
-      required: false
-    },
-  }
+      requiredVariable: {
+        type: Number,
+        required: true
+      },
+      possibleVariable: {
+        type: String,
+        required: false
+      },
+    }
 
   };
   </script>
